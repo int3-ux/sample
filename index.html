@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAT PAGE SAMPLE</title>
+  <style>
+    #btn {
+      display: flex;
+      background-color: lightblue;
+      color: royalblue;
+      cursor: pointer;
+    }
+    ul {
+      background-color: blueviolet;
+    }
+    li {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <textarea cols="50" rows="3" id="area"></textarea>
+  <button onclick="plus()" id="btn">ついか</button>
+  <ul id="chaat">
+    <li>FIFA World cup 2026</li>
+    <li>だれが勝つか自由にチャットしてください。</li>
+  </ul>
+  <script>
+   let btn = document.getElementById('btn');
+   let ul = document.getElementById('chaat');
+
+   function plus() {
+    let textArea = document.getElementById('area').value;
+
+    if( textArea === "") { return; }
+
+    ul.insertAdjacentHTML('beforeend','<li>'+textArea+'</li>');
+
+    document.getElementById('area').value = "";
+
+
+   }
+
+
+  </script>
+</body>
+</html>
